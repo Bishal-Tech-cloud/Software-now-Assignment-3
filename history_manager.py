@@ -1,8 +1,3 @@
-"""
-History Manager Class
-Manages undo/redo functionality for image operations
-Demonstrates encapsulation and state management
-"""
 
 import numpy as np
 
