@@ -6,11 +6,9 @@ import numpy as np
 from image_processor import ImageProcessor
 from history_manager import HistoryManager
 
-class ImageProcessingApp:
-    """Main Application for Image Processing."""
+class ImageProcessingApp: # For main application for image processing
 
     def __init__(self, master):
-        """Initialize application components."""
         self.master = master
         self.master.title("Image Processing Application using OpenCV")
         self.master.geometry("1000x700")
@@ -31,11 +29,11 @@ class ImageProcessingApp:
         self.createStatusBar()
 
     def createMenus(self):
-        """Create the menu bar for file and edit operations."""
         menu = Menu(self.master)
         self.master.config(menu=menu)
 
-        # File menu options and contains some more commands
+        # For File menu options
+
         fileMenu = Menu(menu, tearoff=0)
         menu.add_cascade(label="File", menu=fileMenu)
         fileMenu.add_command(label="Open", command=self.openImage)
@@ -44,7 +42,7 @@ class ImageProcessingApp:
         fileMenu.add_separator()
         fileMenu.add_command(label="Exit", command=self.exitApp)
 
-        # Edit menu options
+        # For  menu options
         editMenu = Menu(menu, tearoff=0)
         menu.add_cascade(label="Edit", menu=editMenu)
         editMenu.add_command(label="Undo", command=self.undo)
@@ -57,7 +55,6 @@ class ImageProcessingApp:
         toolbar = Frame(self.master, bg="lightgray", bd=1, relief=RAISED)
         toolbar.pack(side=TOP, fill=X)
 
-        # Add buttons to the toolbar
         Button(toolbar, text="Open", command=self.openImage).pack(side=LEFT, padx=2, pady=2)
         Button(toolbar, text="Save", command=self.saveImage).pack(side=LEFT, padx=2, pady=2)
         Button(toolbar, text="Undo", command=self.undo).pack(side=LEFT, padx=2, pady=2)
@@ -69,7 +66,7 @@ class ImageProcessingApp:
         mainFrame = Frame(self.master)
         mainFrame.pack(fill=BOTH, expand=True)
 
-        # Create control panel and image display area
+        # For  control panel and image display area
         self.createControlPanel(mainFrame)
         self.createImagePanel(mainFrame)
 
@@ -81,30 +78,30 @@ class ImageProcessingApp:
 
         Label(controlFrame, text="Image Processing Controls", font=("Arial", 12, "bold"), bg="#e0e0e0").pack(pady=10)
 
-        # Filters section
+        # For Filters section
         filterFrame = LabelFrame(controlFrame, text="Filters", font=("Arial", 10, "bold"), bg="#e0e0e0")
         filterFrame.pack(fill=X, padx=10, pady=5)
 
         Button(filterFrame, text="Grayscale", command=self.applyGrayscale).pack(pady=3)
         Button(filterFrame, text="Edge Detection", command=self.applyEdgeDetection).pack(pady=3)
 
-        # Blur with slider
+        # For Blur with slider
         Label(filterFrame, text="Blur Intensity:", bg="#e0e0e0").pack(pady=(5, 0))
         self.blurScale = Scale(filterFrame, from_=1, to=50, orient=HORIZONTAL, length=220, command=self.applyBlur)
         self.blurScale.set(5)
         self.blurScale.pack(pady=3)
 
-        # Adjustments section
+        # For  Adjustments section
         adjustFrame = LabelFrame(controlFrame, text="Adjustments", font=("Arial", 10, "bold"), bg="#e0e0e0")
         adjustFrame.pack(fill=X, padx=10, pady=5)
 
-        # Brightness control
+        # For Brightness control
         Label(adjustFrame, text="Brightness:", bg="#e0e0e0").pack(pady=(5, 0))
         self.brightnessScale = Scale(adjustFrame, from_=-100, to=100, orient=HORIZONTAL, length=220, command=self.adjustBrightness)
         self.brightnessScale.set(0)
         self.brightnessScale.pack(pady=3)
 
-        # Contrast control
+        # For Contrast control
         Label(adjustFrame, text="Contrast:", bg="#e0e0e0").pack(pady=(5, 0))
         self.contrastScale = Scale(adjustFrame, from_=-100, to=100, orient=HORIZONTAL, length=220, command=self.adjustContrast)
         self.contrastScale.set(0)
@@ -112,7 +109,7 @@ class ImageProcessingApp:
 
         Button(adjustFrame, text="Reset Adjustments", command=self.resetAdjustments).pack(pady=5)
 
-        # Transformations section
+        # For Transformations section
         transformFrame = LabelFrame(controlFrame, text="Transformations", font=("Arial", 10, "bold"), bg="#e0e0e0")
         transformFrame.pack(fill=X, padx=10, pady=5)
 
@@ -125,7 +122,7 @@ class ImageProcessingApp:
         Button(transformFrame, text="Flip Horizontal", command=lambda: self.flipImage("horizontal")).pack(pady=2)
         Button(transformFrame, text="Flip Vertical", command=lambda: self.flipImage("vertical")).pack(pady=2)
 
-        # Resize section
+        # For Resize section
         Label(transformFrame, text="Resize (%):", bg="#e0e0e0", font=("Arial", 9, "bold")).pack(pady=(10, 2))
         resizeFrame = Frame(transformFrame, bg="#e0e0e0")
         resizeFrame.pack(pady=3)
@@ -139,11 +136,11 @@ class ImageProcessingApp:
         imageFrame = Frame(parent, bg="white", relief=SUNKEN, bd=2)
         imageFrame.pack(side=RIGHT, fill=BOTH, expand=True, padx=5, pady=5)
 
-        # Canvas for displaying image
+        # For Canvas for displaying image
         self.canvas = Canvas(imageFrame, bg="#d0d0d0", highlightthickness=0)
         self.canvas.pack(fill=BOTH, expand=True)
 
-        # Placeholder text
+        # For Placeholder text
         self.placeholderText = self.canvas.create_text(400, 250, text="No image loaded\n\nClick 'Open' or use File > Open to load an image",
                                                         font=("Arial", 14), fill="gray40", justify=CENTER)
 
@@ -178,7 +175,7 @@ class ImageProcessingApp:
                 # Display the image
                 self.displayImage(image)
 
-                # Update status with image information
+                # For image information
                 height, width = image.shape[:2]
                 self.updateStatus(f"Loaded: {filename} | Size: {width}x{height} pixels")
             except Exception as e:
@@ -241,7 +238,7 @@ class ImageProcessingApp:
         self.canvas.delete("all")
         self.canvas.create_image(canvas_width // 2, canvas_height // 2, image=self._display_image)
 
-    # Image Processing Methods
+    # For Image Processing Methods
     def applyGrayscale(self):
         """Apply a grayscale filter."""
         if self._current_image is None:
