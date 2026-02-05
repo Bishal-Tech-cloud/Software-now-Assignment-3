@@ -9,21 +9,8 @@
 
 
 
-## Installation
 
-### Step 1: Install Python Packages
-```bash
-pip3 install opencv-python numpy Pillow
-```
 
-### Step 2: Run the Application
-```bash
-python3 main.py
-```
-
----
-
-## Features
 
 ### Image Processing (8 Required Features)
 1. **Grayscale Conversion** - Convert to black and white
