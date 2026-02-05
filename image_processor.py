@@ -3,7 +3,8 @@ Image Processor Class
 Handles all image processing operations using OpenCV, demonstrating encapsulation.
 """
 
-import cv2
+import cv3
+
 import numpy as np
 
 
