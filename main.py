@@ -12,7 +12,7 @@ class ImageProcessingApp:
     def __init__(self, master):
         """Initialize application components."""
         self.master = master
-        self.master.title("Image Processing Application")
+        self.master.title("Image Processing Application using OpenCV")
         self.master.geometry("1000x700")
 
         # Attributes for storing images
@@ -35,7 +35,7 @@ class ImageProcessingApp:
         menu = Menu(self.master)
         self.master.config(menu=menu)
 
-        # File menu options
+        # File menu options and contains some more commands
         fileMenu = Menu(menu, tearoff=0)
         menu.add_cascade(label="File", menu=fileMenu)
         fileMenu.add_command(label="Open", command=self.openImage)
@@ -219,7 +219,7 @@ class ImageProcessingApp:
                 messagebox.showerror("Error Saving", f"Failed to save image:\n{str(e)}")
 
     def exitApp(self):
-        """Close the application."""
+        """Close the application using a confirmation dialog."""
         if messagebox.askokcancel("Quit", "Do you want to quit the application?"):
             self.master.quit()
 
