@@ -3,7 +3,8 @@
 ## Group Members
 - **[Nishan Hamal]**
 - **[Bishal Basnet]** - 
-- **[aryan Thapa]** 
+- **[aryan Thapa]**
+-  **[aryan Thapa 1]**
  **[Bhuwan Giri]** 
 ---
 
