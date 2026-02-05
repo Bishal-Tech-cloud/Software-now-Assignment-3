@@ -1,10 +1,10 @@
 # HIT137 Assignment 3 - Image Processing Application
 
 ## Group Members
-- **[Student Name 1]** - [Student ID]
-- **[Student Name 2]** - [Student ID]  
-- **[Student Name 3]** - [Student ID]
-
+- **[Nishan Hamal]**
+- **[Bishal Basnet]** - 
+- **[aryan Thaoa]** 
+ **[Bhuwan Giri]** 
 ---
 
 ## Project Description
