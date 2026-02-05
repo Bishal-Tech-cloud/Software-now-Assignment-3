@@ -3,14 +3,11 @@
 ## Group Members
 - **[Nishan Hamal]**
 - **[Bishal Basnet]** - 
-- **[aryan Thaoa]** 
+- **[aryan Thapa]** 
  **[Bhuwan Giri]** 
 ---
 
 
-Desktop image processing application built with Python Tkinter and OpenCV, following Week 8 tutorial programming style.
-
----
 
 ## Installation
 
@@ -144,7 +141,6 @@ project/
 
 ---
 
-## Code Structure (Week 8 Style)
 
 ### Main Program
 ```python
