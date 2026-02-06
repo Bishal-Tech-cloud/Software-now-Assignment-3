@@ -14,7 +14,7 @@ class ImageProcessingApp:
     def __init__(self, master):
         """Constructor - initializes the application"""
         self.master = master
-        self.master.title("Image Processing Application - HIT137 Assignment 3")
+        self.master.title("Image Processing Application using OpenCV ")
         self.master.geometry("1000x700")
         
         # Private attributes (Encapsulation)
