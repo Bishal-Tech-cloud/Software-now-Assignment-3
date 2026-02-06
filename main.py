@@ -182,7 +182,7 @@ class ImageProcessingApp:
         )
         
     def createStatusBar(self):
-        """Create status bar - following Week 8 PDF style"""
+        
         self.statusBar = Label(self.master, text="Ready", bd=1, 
                               relief=SUNKEN, anchor=W)
         self.statusBar.pack(side=BOTTOM, fill=X)
@@ -498,7 +498,7 @@ class ImageProcessingApp:
         self.updateStatus(status_message)
 
 
-# Main program - following Week 8 PDF style
+
 if __name__ == "__main__":
     root = Tk()
     app = ImageProcessingApp(root)
