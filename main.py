@@ -34,7 +34,7 @@ class ImageProcessingApp:
         self.createStatusBar()
         
     def createMenus(self):
-        """Create menu bar - following Week 8 PDF style"""
+        
         # Main menu
         menu = Menu(self.master)
         self.master.config(menu=menu)
@@ -57,7 +57,7 @@ class ImageProcessingApp:
         editMenu.add_command(label="Reset to Original", command=self.resetImage)
         
     def createToolbar(self):
-        """Create toolbar - following Week 8 PDF style"""
+        
         toolbar = Frame(self.master, bg="lightgray", bd=1, relief=RAISED)
         
         # Toolbar buttons - packed LEFT like in PDF
@@ -70,7 +70,7 @@ class ImageProcessingApp:
         toolbar.pack(side=TOP, fill=X)
         
     def createWidgets(self):
-        """Create main widgets - using Frame layout from PDF"""
+      
         # Main container
         mainFrame = Frame(self.master)
         mainFrame.pack(fill=BOTH, expand=True)
@@ -82,7 +82,7 @@ class ImageProcessingApp:
         self.createImagePanel(mainFrame)
         
     def createControlPanel(self, parent):
-        """Create control panel with all image processing options"""
+       
         controlFrame = Frame(parent, width=280, bg="#e0e0e0", relief=RIDGE, bd=2)
         controlFrame.pack(side=LEFT, fill=Y, padx=5, pady=5)
         controlFrame.pack_propagate(False)
@@ -193,7 +193,7 @@ class ImageProcessingApp:
         self.master.update_idletasks()
         
     def openImage(self):
-        """Open an image file - uses filedialog like PDF examples"""
+            
         filename = filedialog.askopenfilename(
             title="Open Image File",
             filetypes=[
