@@ -1,14 +1,15 @@
 # HIT137 Assignment 3 - Image Processing Application
 
 ## Group Members
-- **[Student Name 1]** - [Student ID]
-- **[Student Name 2]** - [Student ID]  
-- **[Student Name 3]** - [Student ID]
+- **[NISHAN HAMAL]** -
+- **[ARYAN THAPA]** - 
+- **[BHUWAN GIRI]** - 
+**[BISHAL BASNET]** - 
 
 ---
 
 ## Project Description
-Desktop image processing application built with Python Tkinter and OpenCV, following Week 8 tutorial programming style.
+Desktop image processing application built with Python Tkinter and OpenCV.
 
 ---
 
@@ -142,9 +143,9 @@ project/
 └── sample_test_image.jpg # Test image
 ```
 
----
 
-## Code Structure (Week 8 Style)
+
+## Code Structure 
 
 ### Main Program
 ```python
@@ -153,7 +154,7 @@ app = ImageProcessingApp(root)
 root.mainloop()
 ```
 
-### Menu Creation (PDF Style)
+### Menu Creation
 ```python
 menu = Menu(self.master)
 self.master.config(menu=menu)
@@ -162,21 +163,21 @@ menu.add_cascade(label="File", menu=fileMenu)
 fileMenu.add_command(label="Open", command=self.openImage)
 ```
 
-### Toolbar (PDF Style)
+### Toolbar 
 ```python
 toolbar = Frame(self.master, bg="lightgray")
 Button(toolbar, text="Open", command=self.openImage).pack(side=LEFT)
 toolbar.pack(side=TOP, fill=X)
 ```
 
-### Status Bar (PDF Style)
+### Status Bar 
 ```python
 self.statusBar = Label(self.master, text="Ready", 
                       bd=1, relief=SUNKEN, anchor=W)
 self.statusBar.pack(side=BOTTOM, fill=X)
 ```
 
-### Message Boxes (PDF Style)
+### Message Boxes 
 ```python
 messagebox.showinfo("Success", "Image saved!")
 messagebox.showerror("Error", "Failed to load")
@@ -257,49 +258,3 @@ pip3 install opencv-python numpy Pillow
 
 ---
 
-## Submission Steps
-
-1. **Create GitHub Repository**
-   - Make it PUBLIC
-   - Name: hit137-assignment3-image-processor
-
-2. **Add Group Members**
-   - Go to Settings > Collaborators
-   - Add all group members
-
-3. **Upload Files**
-   - main.py
-   - image_processor.py
-   - history_manager.py
-   - requirements.txt
-   - README.md
-   - github_link.txt
-   - sample_test_image.jpg
-
-4. **Update github_link.txt**
-   - Add your actual repository URL
-
-5. **Create Zip File**
-   - Zip all files together
-
-6. **Submit to Learnline**
-   - Upload zip file
-   - Include github_link.txt
-
----
-
-## Notes
-
-This application follows Week 8 tutorial style:
-- Simple, clear code structure
-- Basic Tkinter widgets
-- Frame-based layout
-- PDF example patterns
-- Easy to understand
-
-All assignment requirements are met!
-
----
-
-**Last Updated:** January 2026  
-**Version:** 1.0
